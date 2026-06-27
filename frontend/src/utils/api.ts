@@ -2,7 +2,7 @@
 
 import type { Source, Job, Stats, JobsResponse, AddSourcePayload, FilterState, SearchPayload } from '../types';
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = 'https://employsure-backend.onrender.com';
 
 /* ── Generic fetch wrapper ──────────────────────────────────── */
 
