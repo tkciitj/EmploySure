@@ -80,7 +80,12 @@ settings = get_settings()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.frontend_url],
+    allow_origins=[
+        settings.frontend_url,
+        "https://www.employsure.publicvm.com",
+        "https://employsure.publicvm.com",
+        "https://employsure-app.onrender.com"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
