@@ -279,9 +279,23 @@ export function BulkEmailTab() {
      RENDER
      ══════════════════════════════════════════════════════════════ */
   return (
-    <div className="cold-email-container fade-in">
-      {/* Header */}
-      <div className="ce-header">
+    <div className="cold-email-container fade-in" style={{ position: 'relative', overflow: 'hidden' }}>
+      
+      {/* ── COMING SOON OVERLAY ── */}
+      <div className="bulk-coming-soon-overlay">
+        <div className="coming-soon-content">
+          <div className="coming-soon-icon">🚀</div>
+          <h2 className="coming-soon-title">Coming Soon!</h2>
+          <p className="coming-soon-desc">
+            The automated Bulk Email feature is currently undergoing maintenance and upgrades. It will be back online shortly.
+          </p>
+        </div>
+      </div>
+
+      {/* ── EXISTING CONTENT (BLURRED OUT) ── */}
+      <div style={{ filter: 'blur(5px)', pointerEvents: 'none', opacity: 0.5, userSelect: 'none' }}>
+        {/* Header */}
+        <div className="ce-header">
         <div className="ce-header-icon">📮</div>
         <div>
           <h2 className="ce-title">Bulk Email Tool</h2>
@@ -500,6 +514,7 @@ export function BulkEmailTab() {
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 }
