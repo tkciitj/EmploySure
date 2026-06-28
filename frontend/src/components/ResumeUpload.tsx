@@ -44,7 +44,7 @@ export function ResumeUpload({ onSearchFromResume, isSearching }: ResumeUploadPr
       const formData = new FormData();
       formData.append('file', file);
 
-      const res = await fetch('http://localhost:8000/api/resume/analyze', {
+      const res = await fetch('https://employsure-backend.onrender.com/api/resume/analyze', {
         method: 'POST',
         body: formData,
       });
